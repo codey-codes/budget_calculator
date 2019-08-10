@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #ece9e6, #ffffff);
+}
+
+.top {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/1537165/pexels-photo-1537165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid black;
+}
+
+.top h2 {
+    color: white;
+    text-align: left;
+    padding: 30px 0 0 20px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.top h3 {
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.net-div {
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+}
+
+.net-div span {
+    color: white;
+    font-size: 32px;
+}
+
+
+.income-box {
+    width: 500px;
+    height: 50px;
+    background-color: #51E951;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #00B600;
+}
+
+.income-box-left {
+    color: #00B600;
+    text-shadow: .2px .2px black;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 18px;
+    float: left;
+    width: 151px;
+}
+
+.income-box-right {
+    float: right;
+    width: 340px;
+    text-align: right;
+    padding-right: 56px;
+    padding-top: 10px;
+    font-size: 22px;
+    color: #00B600;
+    text-shadow: .5px .5px black;
+}
+
+#total-income {
+    padding-left: 10px;
+}
+
+.expenses-box {
+    width: 500px;
+    height: 50px;
+    background-color: #FF5959;
+    margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #E30000;
+}
+
+.expenses-box-left {
+    color: #E30000;
+    text-shadow: .2px .2px black;
+    padding-top: 15px;
+    padding-left: 10px;
+    font-size: 18px;
+    float: left;
+    width: 170px;
+}
+
+.expenses-box-right {
+    float: right;
+    width: 327px;
+    text-align: right;
+    padding-right: 12px;
+    padding-top: 10px;
+    font-size: 22px;
+    color: #E30000;
+    text-shadow: .5px .5px black;
+}
+
+#total-expenses {
+    padding-left: 10px;
+}
+
+#expenses-percent {
+    background-color: rgb(255, 167, 167);
+    text-shadow: none;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.middle {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 25px 0;
+    color: black;
+    font-size: 12px;
+    background-color: rgb(201, 201, 201);
+}
+
+.middle-center, .middle-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.middle-center input, .middle-right input {
+    margin: 5px 20px 0;
+    outline: none;
+    border-radius: 7px;
+    border: none;
+}
+
+
+select {
+    margin: 0 20px; 
+}
+
+#btn-submit {
+    background-color: black;
+    border: none;
+    padding: 0 20px;
+    margin: 0 20px;
+    height: 25px;
+    color: white;
+    border-radius: 10px;
+    transition: all .1s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+#btn-submit:hover {
+    cursor: pointer;
+}
+
+#btn-submit:active {
+    transform: translateY(3px);
+    outline: none;
+}
+
+#description,
+#amount {
+    outline: none;
+    height: 25px;
+    padding-left: 7px;
+}
+#income-or-expense {
+    border-radius: 5px;
+    outline: none;
+    padding-left: 3px;
+}
+
+.bottom {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 50px 0;
+}
+.income-section {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.expenses-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.income-section p {
+    text-align: center;
+    font-weight: 700;
+    color: #00B600;
+    margin-bottom: 20px;
+
+}
+.expenses-section p {
+    text-align: center;
+    color: #E30000;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    text-align: center;
+    background-color: rgb(226, 226, 226);
+}
+
+tbody tr > td:not(:nth-child(2)) {
+    text-align: center;
+}

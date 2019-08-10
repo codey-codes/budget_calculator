@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="shortcut icon" type="image/png" href="###favicon link###">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="queries.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+        <title>Budget Calculator</title>
+    </head>
+
+    <body>
+        <div class="top">
+            <h2>Calculate Budget</h2>
+            <h3>Net Amount:</h3>
+            <div class="net-div">
+                <span id="net-result">+</span>
+                <span id="net-amount">0.00</span>
+            </div>
+            <div class="income-box">
+                <div class="income-box-left">TOTAL INCOME</div>
+                <div class="income-box-right"><span>+</span><span id="total-income">$0.00</span></div>
+            </div>
+            <div class="expenses-box">
+                <div class="expenses-box-left">TOTAL EXPENSES</div>
+                <div class="expenses-box-right"><span>-</span><span id="total-expenses">$0.00</span><span id="expenses-percent">0%</span></div>
+            </div>
+        </div>
+        <div class="middle">
+            <form>
+                <div class="middle-left">
+                    <select id="income-or-expense">
+                        <option disabled selected value="0">Select Type</option>
+                        <option value="+">Income</option>
+                        <option value="-">Expense</option>
+                    </select>
+                </div>
+                <div class="middle-center">
+                    Description:<br>
+                    <input type="text" id="description">
+                </div>  
+                <div class="middle-right">
+                    Amount ($):<br>
+                    <input type="text" id="amount">
+                </div>
+                <button id="btn-submit">Add</button>
+            </form>
+        </div>
+        <div class="bottom">
+            <div class="income-section">
+                <p>INCOME</p>
+                <table id="income-table">
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+            </div>
+            <div class="expenses-section">
+                <p>EXPENSES</p>
+                <table id="expenses-table">
+                    <tr>
+                        <th>#</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>
