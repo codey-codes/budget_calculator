@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html {
@@ -12,12 +13,14 @@ html {
 body {
     height: 100%;
     width: 100%;
+    background-image: -webkit-gradient(linear, left top, right top, from(#ece9e6), to(#ffffff));
     background-image: linear-gradient(to right, #ece9e6, #ffffff);
 }
 
 .top {
     width: 100%;
     height: auto;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.5))), url("https://images.pexels.com/photos/1537165/pexels-photo-1537165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/1537165/pexels-photo-1537165.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
     background-size: cover;
     background-position: center;
@@ -59,7 +62,8 @@ body {
     background-color: #51E951;
     margin: 25px auto;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px #00B600;
+    -webkit-box-shadow: 2px 2px 5px #00B600;
+            box-shadow: 2px 2px 5px #00B600;
 }
 
 .income-box-left {
@@ -93,7 +97,8 @@ body {
     background-color: #FF5959;
     margin: 25px auto;
     border-radius: 10px;
-    box-shadow: 2px 2px 5px #E30000;
+    -webkit-box-shadow: 2px 2px 5px #E30000;
+            box-shadow: 2px 2px 5px #E30000;
 }
 
 .expenses-box-left {
@@ -131,9 +136,15 @@ body {
 }
 
 form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .middle {
@@ -147,9 +158,16 @@ form {
 }
 
 .middle-center, .middle-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .middle-center input, .middle-right input {
@@ -172,8 +190,12 @@ select {
     height: 25px;
     color: white;
     border-radius: 10px;
+    -webkit-transition: all .1s;
     transition: all .1s;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     -webkit-tap-highlight-color: transparent;
     outline: none;
 }
@@ -183,7 +205,8 @@ select {
 }
 
 #btn-submit:active {
-    transform: translateY(3px);
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
     outline: none;
 }
 
@@ -203,21 +226,49 @@ select {
     width: 80%;
     margin: 0 auto;
     height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 50px 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .income-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin-right: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 30px 5px 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .expenses-section {
-    flex: 1;
+    margin: 30px 0 0 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 .income-section p {
     text-align: center;

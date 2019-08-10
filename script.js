@@ -56,52 +56,52 @@ document.getElementById('btn-submit').addEventListener('click', click => {
     let rowNewIncome, rowNewExpenses;
     
     descriptionValue = document.getElementById('description').value;
-    amountValue = Number(document.getElementById('amount').value);
+    amountValue = parseFloat(document.getElementById('amount').value);
 
     type = document.getElementById('income-or-expense').value;
 
-    if (type === "0") {
-        window.alert("Please select type!");
-        return;
-     } else if (type === "+") {
-        totalIncome += amountValue;  
-        incomeTable();
-    } else if (type === "-") {
-        totalExpenses += amountValue;
-        expensesTable();
-    }
+    if (amountValue) {
+        if (type === "0") {
+            window.alert("Please select type!");
+            return;
+         } else if (type === "+") {
+            totalIncome += amountValue;  
+            incomeTable();
+        } else if (type === "-") {
+            totalExpenses += amountValue;
+            expensesTable();
+        }
 
-    netAmount = totalIncome - totalExpenses;
+        netAmount = totalIncome - totalExpenses;
 
-    if (netAmount < 0) {
-        document.getElementById('net-result').textContent = "-";
-    } else if (netAmount >= 0) {
-        document.getElementById('net-result').textContent = "+";
-    }
-
-    if (totalIncome === 0) expensePercent = 100;
-    else expensePercent = (totalExpenses / totalIncome) * 100;
-
-    document.getElementById('net-amount').textContent = dollarFormat(netAmount);
-    document.getElementById('total-income').textContent = dollarFormat(totalIncome);
-    document.getElementById('total-expenses').textContent = dollarFormat(totalExpenses);
-    document.getElementById('expenses-percent').textContent = expensePercent.toFixed(2) + "%";
-
-    function incomeTable() {
-        rowNewIncome = inTable.insertRow(-1);   // -1 adds new row to the last
-        rowNewIncome.insertCell(0).innerHTML = inCounter;
-        rowNewIncome.insertCell(1).innerHTML = descriptionValue;
-        rowNewIncome.insertCell(2).innerHTML = dollarFormat(amountValue);
-        inCounter++;
-    }
-
-    function expensesTable() {
-        rowNewExpenses = outTable.insertRow(-1);
-        rowNewExpenses.insertCell(0).innerHTML = outCounter;
-        rowNewExpenses.insertCell(1).innerHTML = descriptionValue;
-        rowNewExpenses.insertCell(2).innerHTML = dollarFormat(amountValue);
-        outCounter++;
-    }
+        if (netAmount < 0) {
+            document.getElementById('net-result').textContent = "-";
+        } else if (netAmount >= 0) {
+            document.getElementById('net-result').textContent = "+";
+        }
+    
+        if (totalIncome === 0) expensePercent = 100;
+        else expensePercent = (totalExpenses / totalIncome) * 100;
+    
+        document.getElementById('net-amount').textContent = dollarFormat(netAmount);
+        document.getElementById('total-income').textContent = dollarFormat(totalIncome);
+        document.getElementById('total-expenses').textContent = dollarFormat(totalExpenses);
+        document.getElementById('expenses-percent').textContent = expensePercent.toFixed(2) + "%";
+        function incomeTable() {
+            rowNewIncome = inTable.insertRow(-1);   // -1 adds new row to the last
+            rowNewIncome.insertCell(0).innerHTML = inCounter;
+            rowNewIncome.insertCell(1).innerHTML = descriptionValue;
+            rowNewIncome.insertCell(2).innerHTML = dollarFormat(amountValue);
+            inCounter++;
+        }
+        function expensesTable() {
+            rowNewExpenses = outTable.insertRow(-1);
+            rowNewExpenses.insertCell(0).innerHTML = outCounter;
+            rowNewExpenses.insertCell(1).innerHTML = descriptionValue;
+            rowNewExpenses.insertCell(2).innerHTML = dollarFormat(amountValue);
+            outCounter++;
+        }
+    } else window.alert('Please enter a valid number in \'Amount\' field');
 });
 
 
